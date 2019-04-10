@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas - 画板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #canvas {
+            background-color: green;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+<div id="canvas">
+
+</div>
+</body>
+<script>
+    var div = document.getElementById('canvas')
+
+    // 按下鼠标
+    div.onmousedown = function (e) {
+        var x = e.clientX
+        var y = e.clientY
+        var div1 = document.createElement('div')
+        div1.style = 'width:6px;height:6px;background-color:black;border-radius: 3px;position:absolute;top:' + (y-3) + 'px;left:' + (x-3) + 'px;'
+        div.appendChild(div1)
+    }
+
+    // 动鼠标
+    div.onmousemove = function (e) {
+        console.log(2)
+    }
+
+    //松开鼠标
+    div.onmouseup = function (e) {
+        console.log(3)
+    }
+</script>
+</html>
