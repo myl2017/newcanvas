@@ -1,2 +1,2 @@
 # newcanvas
-兼容PC端和Mobile端，画写
+兼容PC端和Mobile端的画板
